@@ -6,15 +6,16 @@ export const MainContainer = styled.main`
   width: 100%;
   margin: 2rem auto;
   height: 34rem;
+  padding: 0 10rem;
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-image: url(${background});
   background-size: contain;
 
   div {
-    max-width: 36.75rem;
+    width: 36.75rem;
 
     display: flex;
     flex-direction: column;

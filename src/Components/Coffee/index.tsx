@@ -1,17 +1,4 @@
-export type Taste =
-  | 'Americano'
-  | 'Arabe'
-  | 'CafeComLeite'
-  | 'CafeGelado'
-  | 'Cappuccino'
-  | 'ChocolateQuente'
-  | 'Cubano'
-  | 'Expresso'
-  | 'ExpressoCremoso'
-  | 'Havaiano'
-  | 'Latte'
-  | 'Macchiato'
-  | 'Mochaccino'
+import { Taste } from "../../@types/menu";
 
 interface CoffeeProps {
   taste: Taste

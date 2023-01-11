@@ -1,17 +1,11 @@
 import { ShoppingCart } from "phosphor-react";
 import { ChangeEvent, useState } from "react";
 
-import { Coffee, Taste } from "../Coffee";
+import { Menu } from "../../@types/menu";
+import { Coffee } from "../Coffee";
 import { Actions, CartCardContainer, ListCardContainer, Stepper, StepperButton } from "./styles";
 
-interface CardProps {
-  type: 'cart' | 'list'
-  image: Taste
-  title: string
-  description: string
-  price: number
-  tags: string[]
-}
+interface CardProps extends Menu {}
 
 export function Card({
   type,
