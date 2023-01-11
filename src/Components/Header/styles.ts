@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   width: 100%;
-  margin: 1rem auto;
-  padding: 0.5rem;
+  margin: 2rem auto;
+
+  max-width: 90rem;
 
   display: flex;
   align-items: center;
@@ -21,7 +22,7 @@ const Icon = styled.div`
   justify-content: center;
   gap: 0.25rem;
 
-  margin: 1rem auto;
+  margin: 0 auto;
   padding: 0.5rem;
   border-radius: 8px;
 
