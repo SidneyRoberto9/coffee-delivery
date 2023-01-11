@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
   width: 100%;
   margin: 2rem auto;
-
-  max-width: 90rem;
+  max-width: calc(100% - 23.75rem);
 
   display: flex;
   align-items: center;

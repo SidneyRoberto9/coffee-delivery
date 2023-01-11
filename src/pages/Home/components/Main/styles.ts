@@ -4,13 +4,14 @@ import background from "../../../../assets/intro-background.png";
 
 export const MainContainer = styled.main`
   width: 100%;
+  margin: 2rem auto;
   height: 34rem;
-  margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-image: url(${background});
+  background-size: contain;
 
   div {
     max-width: 36.75rem;
