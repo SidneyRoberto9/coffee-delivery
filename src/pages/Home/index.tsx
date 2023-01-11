@@ -1,4 +1,3 @@
-import expresso from "../../assets/coffee/expresso.svg";
 import { Card } from "../../Components/Card";
 import { Main } from "./components/Main";
 import { HomeContainer } from "./styles";
@@ -8,8 +7,9 @@ export function Home() {
     <HomeContainer>
       <Main />
       <Card
+        key={1}
         type="list"
-        image={expresso}
+        image="Expresso"
         title="Expresso Tradicional"
         description="O tradicional café feito com água quente e grãos moídos"
         tags={['Tradicional']}
