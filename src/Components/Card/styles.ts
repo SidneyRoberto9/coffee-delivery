@@ -133,6 +133,7 @@ export const StepperButton = styled.button<StepperButtonProps>`
   cursor: pointer;
   font-size: 1.2rem;
   text-align: center;
+  transition: color 200ms;
 
   padding: ${({ model }) =>
     model === 'decrement'
@@ -143,6 +144,10 @@ export const StepperButton = styled.button<StepperButtonProps>`
 
   background-color: ${({ theme }) => theme['gray-400']};
   color: ${({ theme }) => theme['purple-300']};
+
+  &:hover {
+    color: ${({ theme }) => theme['purple-500']};
+  }
 
   &:focus {
     outline: none;
