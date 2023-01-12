@@ -1,9 +1,21 @@
-import { AddressContainer } from "./styles";
+import { MapPinLine } from "phosphor-react";
+
+import { AddressContainer, Input } from "./styles";
 
 export function Address() {
   return (
     <AddressContainer>
-      <h1>Address</h1>
+      <article>
+        <MapPinLine size={26} />
+        <span>
+          <p> Endereço de Entrega</p>
+          <p>Informe o endereço onde deseja receber seu pedido</p>
+        </span>
+      </article>
+
+      <form action="">
+        <Input />
+      </form>
     </AddressContainer>
   )
 }
