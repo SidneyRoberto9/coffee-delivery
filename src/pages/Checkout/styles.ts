@@ -9,10 +9,10 @@ export const CheckoutContainer = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  article {
+  main {
     display: flex;
     flex-direction: column;
-    gap: 0.375rem;
+    gap: 0.75rem;
   }
 
   h1 {
@@ -20,6 +20,8 @@ export const CheckoutContainer = styled.div`
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.6;
+    padding: 1rem 0;
+
     color: ${({ theme }) => theme['gray-800']};
   }
 `
