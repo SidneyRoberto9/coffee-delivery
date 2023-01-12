@@ -96,6 +96,11 @@ export const Actions = styled.div`
 
       color: ${({ theme }) => theme.white};
       background-color: ${({ theme }) => theme['purple-500']};
+      transition: background-color 200ms;
+
+      &:hover {
+        background-color: ${({ theme }) => theme['purple-300']};
+      }
     }
   }
 `
