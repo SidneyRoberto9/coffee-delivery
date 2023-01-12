@@ -21,11 +21,8 @@ export type CoffeeTag =
   | 'Gelado'
   | 'Com Leite'
 
-export type MenuType = 'cart' | 'list'
-
 export interface Menu {
   id?: number
-  type: MenuType
   image: Taste
   title: string
   description: string

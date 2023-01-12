@@ -1,5 +1,5 @@
-import { Card } from "../../../../Components/Card";
 import { menuList } from "../../../../data/menu.data";
+import { Card } from "../Card";
 import { ListMenuContainer } from "./styles";
 
 export function ListMenu() {

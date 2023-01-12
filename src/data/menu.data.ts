@@ -3,7 +3,6 @@ import { Menu } from "../@types/menu";
 export const menuList: Menu[] = [
   {
     id: 0,
-    type: 'list',
     image: 'Expresso',
     title: 'Expresso Tradicional',
     description: 'O tradicional café feito com água quente e grãos moídos',
@@ -12,7 +11,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 1,
-    type: 'list',
     image: 'Americano',
     title: 'Expresso Americano',
     description: 'Expresso diluído, menos intenso que o tradicional',
@@ -21,7 +19,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 2,
-    type: 'list',
     image: 'ExpressoCremoso',
     title: 'Expresso Cremoso',
     description: 'Café expresso tradicional com espuma cremosa',
@@ -30,7 +27,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 3,
-    type: 'list',
     image: 'CafeGelado',
     title: 'Expresso Gelado',
     description: 'Bebida preparada com café expresso e cubos de gelo',
@@ -39,7 +35,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 4,
-    type: 'list',
     image: 'CafeComLeite',
     title: 'Café com Leite',
     description: 'Meio a meio de expresso tradicional com leite vaporizado',
@@ -48,7 +43,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 5,
-    type: 'list',
     image: 'Latte',
     title: 'Latte',
     description:
@@ -58,7 +52,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 6,
-    type: 'list',
     image: 'Capuccino',
     title: 'Capuccino',
     description:
@@ -68,7 +61,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 7,
-    type: 'list',
     image: 'Macchiato',
     title: 'Macchiato',
     description:
@@ -78,7 +70,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 8,
-    type: 'list',
     image: 'Mochaccino',
     title: 'Mochaccino',
     description: 'Café expresso com calda de chocolate, pouco leite e espuma',
@@ -87,7 +78,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 9,
-    type: 'list',
     image: 'ChocolateQuente',
     title: 'Chocolate Quente',
     description: 'Bebida feita com chocolate dissolvido no leite quente e café',
@@ -96,7 +86,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 10,
-    type: 'list',
     image: 'Cubano',
     title: 'Cubano',
     description:
@@ -106,7 +95,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 11,
-    type: 'list',
     image: 'Havaiano',
     title: 'Havaiano',
     description: 'Bebida adocicada preparada com café e leite de coco',
@@ -115,7 +103,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 12,
-    type: 'list',
     image: 'Arabe',
     title: 'Árabe',
     description: 'Bebida preparada com grãos de café árabe e especiarias',
@@ -124,7 +111,6 @@ export const menuList: Menu[] = [
   },
   {
     id: 13,
-    type: 'list',
     image: 'Irlandes',
     title: 'Irlandês',
     description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
