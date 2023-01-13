@@ -19,5 +19,8 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 1rem;
     }
 
+    a, ins {
+        text-decoration: none;
+    }
 
 `

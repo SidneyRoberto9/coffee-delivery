@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import { Card } from "../Card";
 import { CartContainer, ConfirmButton, TotalItens } from "./styles";
 
@@ -28,9 +30,11 @@ export function Cart() {
         </span>
       </TotalItens>
 
-      <ConfirmButton>
-        <button>confirmar pedido</button>
-      </ConfirmButton>
+      <NavLink to="/order">
+        <ConfirmButton>
+          <button>confirmar pedido</button>
+        </ConfirmButton>
+      </NavLink>
     </CartContainer>
   )
 }

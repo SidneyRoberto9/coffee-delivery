@@ -17,10 +17,6 @@ export const TotalItens = styled.div`
     justify-content: space-between;
     padding: 0.375rem 0;
 
-    ins {
-      text-decoration: none;
-    }
-
     p,
     ins {
       font-weight: 400;
