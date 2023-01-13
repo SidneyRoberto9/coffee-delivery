@@ -6,12 +6,15 @@ export const CheckoutContainer = styled.div`
   max-width: calc(100% - 20rem);
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 2rem;
 
-  main {
+  main,
+  footer {
     display: flex;
     flex-direction: column;
+
     gap: 0.75rem;
   }
 

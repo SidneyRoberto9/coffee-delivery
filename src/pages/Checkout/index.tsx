@@ -12,10 +12,10 @@ export function Checkout() {
         <Payment />
       </main>
 
-      <span>
+      <footer>
         <h1>Cafés selecionados</h1>
         <Cart />
-      </span>
+      </footer>
     </CheckoutContainer>
   )
 }
