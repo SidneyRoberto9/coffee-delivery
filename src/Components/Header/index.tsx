@@ -1,10 +1,18 @@
 import { MapPin, ShoppingCart } from "phosphor-react";
+import { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import logo from "../../assets/coffee-logo.svg";
-import { HeaderContainer, Locale, ShoppingCar } from "./styles";
+import { ChartContext } from "../../context/ChartContext";
+import { HeaderContainer, Locale, ShoppingCarIcon } from "./styles";
 
 export function Header() {
+  const { totalItems } = useContext(ChartContext)
+
+  useEffect(() => {
+    console.log(totalItems)
+  }, [totalItems])
+
   return (
     <HeaderContainer>
       <NavLink to="/">
@@ -18,9 +26,10 @@ export function Header() {
         </Locale>
 
         <NavLink to="/checkout">
-          <ShoppingCar>
+          <ShoppingCarIcon>
             <ShoppingCart size={22} weight="fill" />
-          </ShoppingCar>
+            {totalItems > 0 && <span>{totalItems}</span>}
+          </ShoppingCarIcon>
         </NavLink>
       </nav>
     </HeaderContainer>
