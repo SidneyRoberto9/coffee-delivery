@@ -15,8 +15,9 @@ export function Card({
   price,
   title,
   tags,
+  qtd,
 }: CardProps) {
-  const [quantity, setQuantity] = useState<number>(1)
+  const [quantity, setQuantity] = useState<number>(qtd)
 
   const { addChartItem } = useContext(ChartContext)
 

@@ -9,10 +9,6 @@ import { HeaderContainer, Locale, ShoppingCarIcon } from "./styles";
 export function Header() {
   const { totalItems } = useContext(ChartContext)
 
-  useEffect(() => {
-    console.log(totalItems)
-  }, [totalItems])
-
   return (
     <HeaderContainer>
       <NavLink to="/">

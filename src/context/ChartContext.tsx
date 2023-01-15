@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useEffect, useReducer, useState } from "react";
 
-import { addNewItemAction, emptyAction, removeItemAction } from "../reducers/chart/actions";
+import { addNewItemAction, emptyAction, removeItemAction, updateQuantityAction } from "../reducers/chart/actions";
 import { chartItem, chartReducers } from "../reducers/chart/reducer";
 
 interface ChartContextType {
@@ -8,6 +8,7 @@ interface ChartContextType {
   totalItems: number
   addChartItem: (data: chartItem) => void
   removeChartItem: (id: number) => void
+  updateChartItemQtd: (id: number, qtd: number) => void
   clearChart: () => void
 }
 
@@ -51,6 +52,9 @@ export function ChartContextProvider({ children }: ChartContextProviderProps) {
   function removeChartItem(id: number) {
     dispatch(removeItemAction(id))
   }
+  function updateChartItemQtd(id: number, qtd: number) {
+    dispatch(updateQuantityAction(id, qtd))
+  }
 
   function clearChart() {
     dispatch(emptyAction())
@@ -70,6 +74,7 @@ export function ChartContextProvider({ children }: ChartContextProviderProps) {
         clearChart,
         addChartItem,
         removeChartItem,
+        updateChartItemQtd,
       }}
     >
       {children}

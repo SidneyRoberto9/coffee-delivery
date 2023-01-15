@@ -1,9 +1,19 @@
 import { CurrencyDollar, MapPin, Timer } from "phosphor-react";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 import orderLogo from "../../assets/orderLogo.png";
+import { OrderContext } from "../../context/OrderContext";
 import { Icon, OrderContainer, OrderMain } from "./styles";
 
 export function Order() {
+  const { order } = useContext(OrderContext)
+  const navigate = useNavigate()
+
+  if (order.cep == null) {
+    navigate('/')
+  }
+
   return (
     <OrderContainer>
       <header>

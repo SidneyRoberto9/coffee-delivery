@@ -1,9 +1,20 @@
 import { chartItem } from "./reducer";
 
 export enum ActionTypes {
+  UPDATE_QUANTITY = 'UPDATE_QUANTITY',
   ADD_NEW_ITEM = 'ADD_NEW_ITEM',
   REMOVE_ITEM = 'REMOVE_ITEM',
   EMPTY = 'EMPTY',
+}
+
+export function updateQuantityAction(id: number, qtd: number) {
+  return {
+    type: ActionTypes.UPDATE_QUANTITY,
+    payload: {
+      id,
+      qtd,
+    },
+  }
 }
 
 export function addNewItemAction(newItem: chartItem) {

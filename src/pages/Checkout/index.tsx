@@ -1,8 +1,10 @@
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useContext } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import * as zod from "zod";
 
+import { OrderContext } from "../../context/OrderContext";
 import { Address } from "./components/Address";
 import { Cart } from "./components/Cart";
 import { Payment } from "./components/Payment";
@@ -23,6 +25,7 @@ type NewOrderFormData = zod.infer<typeof newOrderFormValidationSchema>
 
 export function Checkout() {
   const navigate = useNavigate()
+  const { updateOrder } = useContext(OrderContext)
 
   const newOrderForm = useForm<NewOrderFormData>({
     resolver: zodResolver(newOrderFormValidationSchema),
@@ -41,8 +44,7 @@ export function Checkout() {
   const { handleSubmit, reset } = newOrderForm
 
   function handleCreateNewOrder(data: NewOrderFormData) {
-    console.log(data)
-    //createNewCycle(data)
+    updateOrder(data)
     reset()
     navigate('/order')
   }

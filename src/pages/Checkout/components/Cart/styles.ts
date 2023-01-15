@@ -4,6 +4,7 @@ export const CartContainer = styled.div`
   padding: 2.5rem;
   background-color: ${({ theme }) => theme['gray-200']};
   border-radius: 6px 44px;
+  width: 28rem;
 `
 
 export const TotalItens = styled.div`
