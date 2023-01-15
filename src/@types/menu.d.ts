@@ -27,5 +27,6 @@ export interface Menu {
   title: string
   description: string
   tags: CoffeeTag[]
+  qtd: number
   price: number
 }

@@ -29,18 +29,15 @@ export function Card({
   }
 
   function handleAddInChart() {
-    const item = {
+    addChartItem({
       id,
       image,
       title,
       description,
       tags,
       price,
-    }
-
-    for (let i = 0; i < quantity; i++) {
-      addChartItem(item)
-    }
+      qtd: quantity,
+    })
   }
 
   return (

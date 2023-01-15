@@ -12,7 +12,8 @@ export function ListMenu() {
           return (
             <Card
               key={coffee.id}
-              type={coffee.type}
+              id={coffee.id}
+              qtd={coffee.qtd}
               image={coffee.image}
               title={coffee.title}
               description={coffee.description}
