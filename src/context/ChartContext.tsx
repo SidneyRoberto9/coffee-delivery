@@ -1,12 +1,11 @@
-import { createContext, ReactNode, useEffect, useReducer } from "react";
+import { createContext, ReactNode, useEffect, useReducer, useState } from "react";
 
 import { addNewItemAction, emptyAction, removeItemAction } from "../reducers/chart/actions";
 import { chartItem, chartReducers } from "../reducers/chart/reducer";
 
 interface ChartContextType {
   chart: chartItem[]
-  chartTotalItems: number
-  chartTotalPrice: number
+  totalItems: number
   addChartItem: (data: chartItem) => void
   removeChartItem: (id: number) => void
   clearChart: () => void
@@ -25,6 +24,7 @@ export function ChartContextProvider({ children }: ChartContextProviderProps) {
     chartReducers,
     {
       chart: [],
+      totalItems: 0,
     },
     () => {
       const storageStateAsJSON = localStorage.getItem(
@@ -37,15 +37,12 @@ export function ChartContextProvider({ children }: ChartContextProviderProps) {
 
       return {
         chart: [],
+        totalItems: 0,
       }
     },
   )
 
-  const { chart } = chartState
-
-  const chartTotalPrice = chart.reduce((acc, item) => acc + item.price, 0)
-
-  const chartTotalItems = chart.length
+  const { chart, totalItems } = chartState
 
   function addChartItem(data: chartItem) {
     dispatch(addNewItemAction(data))
@@ -69,8 +66,7 @@ export function ChartContextProvider({ children }: ChartContextProviderProps) {
     <ChartContext.Provider
       value={{
         chart,
-        chartTotalPrice,
-        chartTotalItems,
+        totalItems,
         clearChart,
         addChartItem,
         removeChartItem,
