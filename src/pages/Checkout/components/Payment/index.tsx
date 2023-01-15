@@ -1,13 +1,47 @@
 import { Bank, CreditCard, CurrencyDollar, Money } from "phosphor-react";
 import { useState } from "react";
+import { useFormContext } from "react-hook-form";
 
 import { PaymentContainer, PaymentMethod } from "./styles";
 
+interface methods {
+  first: boolean
+  second: boolean
+  third: boolean
+}
+
 export function Payment() {
-  const [active, setActive] = useState<number | null>(null)
+  const [paymentMethod, setPaymentMethod] = useState<methods>({
+    first: false,
+    second: false,
+    third: false,
+  })
+
+  const { register, setValue } = useFormContext()
 
   function handleSelectPaymentMethod(method: number) {
-    setActive(method)
+    if (method == 1) {
+      setPaymentMethod({
+        first: true,
+        second: false,
+        third: false,
+      })
+      setValue('paymentMethod', 'Cartão de Crédito')
+    } else if (method == 2) {
+      setPaymentMethod({
+        first: false,
+        second: true,
+        third: false,
+      })
+      setValue('paymentMethod', 'Cartão de Débito')
+    } else if (method == 3) {
+      setPaymentMethod({
+        first: false,
+        second: false,
+        third: true,
+      })
+      setValue('paymentMethod', 'Dinheiro')
+    }
   }
 
   return (
@@ -26,9 +60,10 @@ export function Payment() {
       </article>
 
       <nav>
+        <input type="text" {...register('paymentMethod')} />
         <PaymentMethod
           onClick={() => handleSelectPaymentMethod(1)}
-          method={active == 1}
+          variant={paymentMethod.first}
         >
           <CreditCard size={16} />
           <p>cartão de crédito</p>
@@ -36,7 +71,7 @@ export function Payment() {
 
         <PaymentMethod
           onClick={() => handleSelectPaymentMethod(2)}
-          method={active == 2}
+          variant={paymentMethod.second}
         >
           <Bank size={16} />
           <p>cartão de débito</p>
@@ -44,7 +79,7 @@ export function Payment() {
 
         <PaymentMethod
           onClick={() => handleSelectPaymentMethod(3)}
-          method={active == 3}
+          variant={paymentMethod.third}
         >
           <Money size={16} />
           <p>dinheiro</p>

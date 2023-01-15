@@ -1,8 +1,11 @@
 import { MapPinLine } from "phosphor-react";
+import { useFormContext } from "react-hook-form";
 
 import { AddressContainer, Input, Row } from "./styles";
 
 export function Address() {
+  const { register } = useFormContext()
+
   return (
     <AddressContainer>
       <article>
@@ -16,21 +19,37 @@ export function Address() {
         </span>
       </article>
 
-      <form action="">
-        <Input placeholder="CEP" type="number" />
-        <Input placeholder="Rua" large="x" type="text" />
+      <ins>
+        <Input placeholder="CEP" type="number" {...register('cep')} />
+        <Input placeholder="Rua" large="x" type="text" {...register('rua')} />
 
         <Row>
-          <Input placeholder="Número" type="number" />
-          <Input placeholder="Complemento" large="l" type="text" />
+          <Input placeholder="Número" type="number" {...register('numero')} />
+          <Input
+            placeholder="Complemento"
+            large="l"
+            type="text"
+            {...register('complemento')}
+          />
         </Row>
 
         <Row>
-          <Input placeholder="Bairro" type="text" />
-          <Input placeholder="Cidade" large="g" type="text" />
-          <Input placeholder="UF" large="p" type="text" />
+          <Input placeholder="Bairro" type="text" {...register('bairro')} />
+          <Input
+            placeholder="Cidade"
+            large="g"
+            type="text"
+            {...register('cidade')}
+          />
+          <Input
+            placeholder="UF"
+            large="p"
+            type="text"
+            maxLength={2}
+            {...register('uf')}
+          />
         </Row>
-      </form>
+      </ins>
     </AddressContainer>
   )
 }

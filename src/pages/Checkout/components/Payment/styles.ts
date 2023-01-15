@@ -36,14 +36,18 @@ export const PaymentContainer = styled.div`
     align-items: center;
     justify-content: flex-start;
     gap: 0.75rem;
+
+    input {
+      display: none;
+    }
   }
 `
 
 interface PaymentMethodProps {
-  method: boolean
+  variant: boolean
 }
 
-export const PaymentMethod = styled.button<PaymentMethodProps>`
+export const PaymentMethod = styled.div<PaymentMethodProps>`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -66,11 +70,11 @@ export const PaymentMethod = styled.button<PaymentMethodProps>`
     color: ${({ theme }) => theme['gray-700']};
   }
 
-  box-shadow: ${({ theme, method }) =>
-    method ? `0 0 0 2px ${theme['purple-300']}` : 'none'};
+  box-shadow: ${({ theme, variant }) =>
+    variant ? `0 0 0 2px ${theme['purple-300']}` : 'none'};
 
-  background-color: ${({ theme, method }) =>
-    method ? theme['purple-100'] : theme['gray-400']};
+  background-color: ${({ theme, variant }) =>
+    variant ? theme['purple-100'] : theme['gray-400']};
 
   &:hover {
     background-color: ${({ theme }) => theme['gray-500']};

@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const CheckoutContainer = styled.div`
-  width: 100%;
-  margin: 0 auto;
-  max-width: calc(100% - 20rem);
+  form {
+    width: 100%;
+    margin: 0 auto;
+    max-width: calc(100% - 20rem);
 
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+  }
 
   main,
   footer {

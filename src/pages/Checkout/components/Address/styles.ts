@@ -30,7 +30,7 @@ export const AddressContainer = styled.div`
     }
   }
 
-  form {
+  ins {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
