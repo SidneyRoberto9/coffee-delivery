@@ -8,6 +8,9 @@ import { Icon, OrderContainer, OrderMain } from "./styles";
 
 export function Order() {
   const { order } = useContext(OrderContext)
+  const { cep, rua, numero, complemento, bairro, cidade, uf, paymentMethod } =
+    order
+
   const navigate = useNavigate()
 
   if (order.cep == null) {
@@ -29,9 +32,9 @@ export function Order() {
             </Icon>
             <div>
               <p>
-                Entrega em <strong>Rua joão Daniel Martinelli, 102</strong>
+                Entrega em <strong>{`${rua}, ${numero}`}</strong>
               </p>
-              <p>Farrapos - Porto Alegre, RS</p>
+              <p>{`${bairro} - ${cidade}, ${uf}`}</p>
             </div>
           </span>
 
@@ -54,7 +57,7 @@ export function Order() {
             <div>
               <p>Pagamento na entrega</p>
               <p>
-                <strong>Cartão de Crédito</strong>
+                <strong>{paymentMethod}</strong>
               </p>
             </div>
           </span>
