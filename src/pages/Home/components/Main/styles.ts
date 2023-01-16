@@ -16,9 +16,14 @@ export const MainContainer = styled.main`
 
   div {
     width: 36.75rem;
-
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+  }
+
+  @media (max-width: 1260px) {
+    flex-direction: column;
+    height: auto;
     gap: 2rem;
   }
 `
