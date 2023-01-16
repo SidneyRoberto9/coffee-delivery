@@ -24,7 +24,17 @@ export const MainContainer = styled.main`
   @media (max-width: 1260px) {
     flex-direction: column;
     height: auto;
+    margin: 2rem auto;
     gap: 2rem;
+
+    div {
+      width: calc(100vw - 4rem);
+    }
+
+    img {
+      width: calc(100% + 10rem);
+      height: calc(100% + 10rem);
+    }
   }
 `
 
@@ -45,6 +55,16 @@ export const Title = styled.span`
   p {
     font-size: 1.25rem;
     line-height: 1.6;
+  }
+
+  @media (max-width: 1260px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+    }
   }
 `
 

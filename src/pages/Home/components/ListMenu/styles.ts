@@ -29,4 +29,9 @@ export const ListMenuContainer = styled.div`
     flex-wrap: wrap;
     gap: 2rem;
   }
+
+  @media (max-width: 1260px) {
+    margin: 2rem auto;
+    max-width: calc(100% - 4rem);
+  }
 `

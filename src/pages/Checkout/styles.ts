@@ -16,7 +16,6 @@ export const CheckoutContainer = styled.div`
   footer {
     display: flex;
     flex-direction: column;
-
     gap: 0.75rem;
   }
 
@@ -28,5 +27,13 @@ export const CheckoutContainer = styled.div`
     padding: 1rem 0;
 
     color: ${({ theme }) => theme['gray-800']};
+  }
+
+  @media (max-width: 1260px) {
+    form {
+      flex-direction: column;
+      margin: 2rem auto;
+      height: auto;
+    }
   }
 `

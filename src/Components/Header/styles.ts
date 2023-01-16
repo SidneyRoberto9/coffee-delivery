@@ -13,6 +13,11 @@ export const HeaderContainer = styled.header`
     display: flex;
     gap: 0.5rem;
   }
+
+  @media (max-width: 1260px) {
+    margin: 2rem auto;
+    max-width: calc(100% - 4rem);
+  }
 `
 
 const Icon = styled.div`
