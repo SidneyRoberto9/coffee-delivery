@@ -2,8 +2,8 @@
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-![GitHub repo size](https://img.shields.io/github/repo-size/SidneyRoberto9/coffeeDelivery-Ignite?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/SidneyRoberto9/coffeeDelivery-Ignite?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/SidneyRoberto9/coffee-delivery?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/SidneyRoberto9/coffee-delivery?style=for-the-badge)
 
 <a href="https://coffee-delivery-sid.netlify.app/" target="_blank">Demo</a>
 
@@ -28,7 +28,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 Para usar o Coffee Delivery, siga estas etapas:
 
 ```
-git clone https://github.com/SidneyRoberto9/coffeeDelivery-Ignite
+git clone https://github.com/SidneyRoberto9/coffee-delivery
 
 yarn ou npm i
 
