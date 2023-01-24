@@ -1,21 +1,15 @@
 import styled from "styled-components";
 
-import background from "../../../../assets/intro-background.png";
-
 export const MainContainer = styled.main`
   width: 100%;
   margin: 2rem auto;
   height: 34rem;
-  padding: 0 10rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: url(${background});
-  background-size: contain;
 
   div {
-    width: 36.75rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;

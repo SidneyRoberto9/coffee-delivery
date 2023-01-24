@@ -4,7 +4,7 @@ export const CheckoutContainer = styled.div`
   form {
     width: 100%;
     margin: 0 auto;
-    max-width: calc(100% - 20rem);
+    max-width: 1120px;
 
     display: flex;
     align-items: flex-start;
@@ -32,6 +32,8 @@ export const CheckoutContainer = styled.div`
   @media (max-width: 1260px) {
     form {
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       margin: 2rem auto;
       height: auto;
     }

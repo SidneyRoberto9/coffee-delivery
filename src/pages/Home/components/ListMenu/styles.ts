@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ListMenuContainer = styled.div`
   width: 100%;
   margin: 0 auto;
-  max-width: calc(100% - 20rem);
+  max-width: 1120px;
 
   display: flex;
   flex-direction: column;
